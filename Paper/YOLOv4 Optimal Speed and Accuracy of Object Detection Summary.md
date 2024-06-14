@@ -80,19 +80,23 @@ CNN 정확도를 향상시키는 다양한 Feature가 있다.
             - 빈 주차 공간 탐색은 느리지만 정확한 Model이 필요하고, 차량 충돌 경고는 빠르지만 부정확한 Model이 사용된다.
     - Improve Real-Time Accuracy, 실시간 정확도 향상
         - Real-Time Object Detector의 정확도를 향상시키면 Recommend System 이외에도 독립적인 Process 관리와 Human Input을 감소시킬 수 있다.
+
 2. **The Need for Real-Time Object Detector, 필요성**
     - Accessibility, 접근성
         - 일반적인 GPU에서 Real-Time으로 운영되면 저렴한 가격에 대량 사용이 가능하다.
     - Current Problem, 현재 문제점
         - 최신 신경망은 Real-Time으로 작동하지 않으며, Training에 많은 수의 GPU가 필요하다.
+
 3. **Solution to YOLOv4**
     - Use Single GPU
         - 일반적인 GPU에서 Real-Time으로 작동하며, Training에 단 하나의 GPU만 필요하다.
+
 4. **Goals**
     - Fast Operating Speed, 빠른 작동 속도
         - Production System에서 Object Detector의 빠른 작동 속도를 설계한다.
     - Optimization for Parallel Computations, 병렬 계산 최적화
         - 낮은 계산량 지표, BFLOP보다 Optimization for Parallel Computations를 중점적으로 한다.
+
 5. **Expectation Effectiveness, 기대 효과** 
     - Easy Training and Use
         - 일반적인 GPU를 사용하는 누구나 쉽게 Training, 사용이 가능하다.
@@ -117,7 +121,9 @@ CNN 정확도를 향상시키는 다양한 Feature가 있다.
     - Result
         - 빠르고 정확한 Object Detector Training
         - 고성능 GPU가 필요하지 않더라도 많은 사람들이 접근 가능한 GPU로 높은 성능의 Object Detection Model을 Training할 수 있게 되어, 활용도가 크게 증가한다.
+        
 2. **Validation of the Impact of State-of-the-Art Bag-of-Freeies and Bag-of-Specials Methods, 영향 검증**
+
     - Bag-of-Freebies
         - Model의 성능을 높이기 위해 추가 비용 없이 사용할 수 있는 기법
         - Data 증강, 정규화 기법이 이에 해당한다.
@@ -127,6 +133,7 @@ CNN 정확도를 향상시키는 다양한 Feature가 있다.
     - Verification, 검증
         - 해당 기법들이 Object Detection Model의 Training 과정에서 미치는 영향을 실험적으로 검증한다.
         - 실제 Training 과정에서 효과를 확인하고, 이를 바탕으로 Model 성능을 최적화 할 수 있다.
+
 3. **Modified in Ways that are Appropriate for Training a Single GPU, 적합한 방법들로 수정**
     - CBN, Cross Mini-Batch Normalization
         - Mini-Batch Cross 정규화 기법으로, Training 과정에서의 안정성을 높이는 방법
